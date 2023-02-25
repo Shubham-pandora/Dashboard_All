@@ -128,8 +128,8 @@ def services(request):
 def pbx(request):
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     WebB1 = WebBeta2.objects.all().values()   
-    print("------------------Query set output --------------------")    
-    print(WebB1)    
+    # print("------------------Query set output  PBX--------------------")    
+    # print(WebB1)    
     # Converted Queryset obj to list
     i = 0
     data = []
@@ -138,8 +138,8 @@ def pbx(request):
             tmp = list((WebB1[i]).values())
             i = i + 1
             data.append(tmp)
-    print("\n\n -------------------1 -------------")
-    print(data)
+    # print("\n\n -----------Converted Queryset obj to list PBX OUTPUT -------------")
+    # print(data)
     # Assigned service data(status,ip,servicename)  into 3 list accordingly
     counter1 = 0    #  number of object /service in WebB1
     service_status = []
@@ -236,10 +236,10 @@ def pbx(request):
 
 
 def web(request):
-    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("+++++++++++++++++WEB REQUEST+++++++++++++++++++++++++++++++++++++++++++++++++++++")
     WebB1 = WebBeta1.objects.all().values()   
-    print("------------------Query set output --------------------")    
-    print(WebB1)    
+    # print("------------------Query set output --------------------")    
+    # print(WebB1)    
     # Converted Queryset obj to list
     i = 0
     data = []
@@ -248,8 +248,8 @@ def web(request):
             tmp = list((WebB1[i]).values())
             i = i + 1
             data.append(tmp)
-    print("\n\n -------------------1 -------------")
-    print(data)
+    # print("\n\n ------------Converted Queryset obj to list WEB OUTPUT -------------")
+    # print(data)
     # Assigned service data(status,ip,servicename)  into 3 list accordingly
     counter1 = 0    #  number of object /service in WebB1
     service_status = []
