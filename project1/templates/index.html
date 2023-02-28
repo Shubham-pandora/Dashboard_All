@@ -9,12 +9,15 @@
  This is my bodyblock <b>{{ip}}</b> {% endcomment %}
  <br><br><br><br>
  <h4>svn://192.168.1.109/Releases/10.x.0.x/service_name/Binaries/
- <br>This <strong>Weekend</strong> RRF Version is :  11.44.0.0
+ <br>This <strong>Weekend</strong> RRF Version is :  11.44.0.0 & 11.44.0.2
+
  <br>Today's Stagging RRF version : 11.xx.0.2</h4>
 
  <h3>----------------------------------------------------------------</h3>
-<b>UPDATE : </b>
-NO Need to Refresh the WEB/PBX PAGE
+ <b>UPDATE : </b> </br>
+NO Need to Refresh the WEB/PBX PAGE </br>
+<strong>{{day_left}} </strong>days left to expired this <strong>clients.crt</strong> certificate
+
 {% comment %} <h3>from db to template</h3>
 </br></br>
 
@@ -34,6 +37,16 @@ NO Need to Refresh the WEB/PBX PAGE
 
 
 </div>
+
+{% comment %} The page will be reloaded in 12 hours {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    setTimeout(function () {
+      location.reload(true);
+    }, 43200000);
+  });
+</script>
 {% endblock body %}
-
-
