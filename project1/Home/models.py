@@ -55,7 +55,10 @@ class NewUpdateInfo(models.Model):
     def __str__(self):
         return self.name 
 
-
+class RRFImage(models.Model):
+    title = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='pics')
+    
 
 
     
